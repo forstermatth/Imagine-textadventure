@@ -1,0 +1,52 @@
+/* Global ------------------------------- */
+body {
+	font-family: monospace;
+}
+
+/* Classes ------------------------------- */
+.edgeLoad-EDGE-36491964 { visibility:hidden; } /*required by edge animate*/
+
+.container {
+    width: 800px;
+}
+
+.center {
+    width: 60%;
+    margin: 0 auto !important;
+    float: none !important;
+}
+
+/* IDs ------------------------------- */
+#typebox {
+	width: 475px;
+	height: 50px;
+	text-align: center;
+}
+
+#game {
+    height: 400px;
+    width: 600px;
+}
+
+#title {
+    font-size: 6em;
+}
+
+#alerttext {
+    font-size: 10;
+    
+    max-height: 100px;
+    overflow: hidden;
+}
+
+#error {
+    color: lightsalmon;
+}
+
+#success {
+    color: lightgreen;
+}
+
+#neutral {
+    color: lightgrey;
+}
