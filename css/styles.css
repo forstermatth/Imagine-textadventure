@@ -68,6 +68,10 @@ dl {
     text-align: center;
 }
 
+#foot a{
+    color: inherit;
+}
+
 #hints {
     color: inherit;
     cursor: help;
