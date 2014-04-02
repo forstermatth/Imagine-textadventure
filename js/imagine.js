@@ -291,3 +291,7 @@ $(document).ready(function () {
     castleGate.setNpc(guard);
         
 });
+
+$('#hints').click(function () {
+        window.open('hints.html', '', 'left=500,top=500,width=400px,height=400px,location=no,menubar=no,resizeable=no,scrollbars=no,titlebar=no,status=no,toolbar=no');
+    });
