@@ -1,7 +1,22 @@
-// The Creation
-var started;
-var eye;
-var you;
+/*
+
+  IMAGINE GAME DEFINITIONS
+
+  This file holds all of the locations, npcs, and items in the game.
+  Making/changing the game is all done here. Extension and changes are as easy as adding / modifing 
+  these definitions
+
+  Author: Matt Forster (@forstermatth)
+  Date:   April 2014
+
+*/
+
+var started; //bool - if the game has been started or not
+var eye; //eye animation
+var you; //player
+
+
+// LOCATIONS --------------------------------------------
 var begin = new Location("begin",
                  "A forest clearing.", 
                  "You wake up on the grass in a clearing, somewhere in some forest.", 
@@ -177,7 +192,7 @@ var castleThrone = new Location("castleThrone",
                                 "You walk into the room, experiencing a feeling of recognition. Have you been here before? <br/> A heavy layer of dust has settled over the throne. It hasn't been used in ages.",
                                 "Walking back into the throne room, you feel haunted. Empty.");
 
-
+// ITEMS --------------------------------------------
 var sword = new Item("sword",
                      "A shiny sword that scares trolls.");
 
@@ -196,6 +211,8 @@ var aleMug = new Item("ale mug",
 var crown = new Item("crown",
                       "A heavy gold crown with inset jewels.");
 
+
+//NPCs --------------------------------------------
 var troll = new Npc("troll",
                     "hairy troll",
                     "NO SHALL PASS",
@@ -236,6 +253,7 @@ var guard = new Npc("guard",
     
 
 // Worldbuilder
+// This function builds the map when the page has loaded.
 $(document).ready(function () {
     started = false;
     eye = $("#game").html();
@@ -292,6 +310,8 @@ $(document).ready(function () {
         
 });
 
+//Open the hints dialog box when the link is clicked.
 $('#hints').click(function () {
         window.open('hints.html', '', 'left=500,top=500,width=400px,height=400px,location=no,menubar=no,resizeable=no,scrollbars=no,titlebar=no,status=no,toolbar=no');
     });
+

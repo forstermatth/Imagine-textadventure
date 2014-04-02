@@ -1,8 +1,9 @@
 //
-//  main.js
+//  map.js
 //
-//  A project template for using arbor.js
-//
+//  The arbor.js definitions required to create a force directed graph
+//  Author: Matt Forster (@forstermatth)
+//  Date:   April 2014
 
 
   var Renderer = function(canvas){
@@ -117,6 +118,8 @@
     }
     return that
   }    
+
+// Draw the map - creates the edges and intializes the canvas.
 
 function drawmap(){
     var sys = arbor.ParticleSystem(500, 300, 0.5) // create the system with sensible repulsion/stiffness/friction
