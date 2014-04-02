@@ -85,6 +85,10 @@ body {
 }
 
 @media only screen and (max-width: 946px) {
+    .container{
+        width: 700px;
+    }
+
     #backpack {
         visibility: hidden;
     }
