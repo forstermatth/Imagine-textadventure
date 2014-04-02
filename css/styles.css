@@ -9,6 +9,9 @@ body {
     top: 30px;
     left: 40px;
     z-index: 1;
+    width: 300px;
+    height: 600px;
+    
 }
 
 
@@ -39,7 +42,7 @@ body {
     width: 300px;
     z-index: 1;
     right: 40px;
-    top: 100px;
+    top: 250px;
     color: grey;
 }
 
@@ -73,12 +76,10 @@ body {
 @media only screen and (max-width: 1268px) {
     #backpack {
         width: 200px;
-        top: 250px;
     }
 
     #map {
-        top: 100px;
-        width: 200px;
+        visibility: hidden;
     }
 
 }

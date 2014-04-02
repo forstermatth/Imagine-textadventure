@@ -25,7 +25,7 @@
       },
       
       redraw:function(){
-        // 
+        particleSystem.screenSize(canvas.width, canvas.height) 
         // redraw will be called repeatedly during the run whenever the node positions
         // change. the new positions for the nodes can be accessed by looking at the
         // .p attribute of a given node. however the p.x & p.y values are in the coordinates
