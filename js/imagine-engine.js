@@ -240,6 +240,7 @@ function Npc(name, desc, speech, speech2, block, movecond) {
 $("#userinput").submit(function (event) {
 
     var input = $("#typebox").val();
+    input = input.toLowerCase();
     var presentation;
     
     //game logic
