@@ -11,6 +11,9 @@ function searchArray(name, property, array){
     return -1;
 }
 
+
+
+
 function Player() {
     this.backpack = [];
     this.position = null;
@@ -130,9 +133,29 @@ Player.prototype.checkItems = function () {
     itemtext += "</p>";
     return itemtext;
 }
+Player.prototype.printBackpack = function () {
+    var packtext;
+    packtext = "<p>";
+    packtext += "Your backpack contains: <br/>";
+    if(this.backpack.length < 1) return packtext + "nothing. </p>";
+    packtext += "<ol>"
+    for(var i = 0; i < this.backpack.length; i++){
+        packtext += "<li>" + this.backpack[i].name + ": " + this.backpack[i].desc + "</li>";
+    }
+    packtext += "</ol></p>";
+    return packtext;
+}
 
-function Location(name, desc, vdesc) {
+
+
+
+
+
+
+
+function Location(name, sdesc, desc, vdesc) {
     this.name = name;
+    this.sdesc = sdesc;
     this.desc = desc;
     this.vdesc = vdesc;
 }
@@ -160,7 +183,7 @@ Location.prototype.printPaths = function () {
     info += "<ul>";
     for (i = 0; i < 6; i++) {
         if (this.paths[i] != 0) {
-            info += "<li>" + compass[i] + ": " + this.paths[i].name + "</li>";
+            info += "<li>" + compass[i] + ": " + this.paths[i].sdesc + "</li>";
         }
     }
     info += "</ul>";
@@ -169,12 +192,31 @@ Location.prototype.printPaths = function () {
     return info;
 }
 
+
+
+
+
+
+
+
+
 function Item(name, desc) {
     this.name = name;
     this.desc = desc;
 }
 Item.prototype.name = "";
 Item.prototype.desc = "";
+
+
+
+
+
+
+
+
+
+
+
 
 function Npc(name, desc, speech, speech2, block, movecond) {
     this.name = name;
@@ -185,8 +227,18 @@ function Npc(name, desc, speech, speech2, block, movecond) {
     this.movecond = movecond;
 }
 
+
+
+
+
+
+
+
+
+
 // the life
 $("#userinput").submit(function (event) {
+
     var input = $("#typebox").val();
     var presentation;
     
@@ -194,8 +246,12 @@ $("#userinput").submit(function (event) {
 
     switch (input) {
     case "begin":
-        you = new Player();
-        you.position = begin;
+        if(started == false){
+            you = new Player();
+            you.position = begin;
+            drawmap();
+            started = true;
+        }
         break;
     case "reset":
         return;
@@ -238,6 +294,7 @@ $("#userinput").submit(function (event) {
 
     $("#typebox").val("");
     $("#typebox").attr("placeholder", "");
+    $("#backpack").html(you.printBackpack());
 
     event.preventDefault();
 });

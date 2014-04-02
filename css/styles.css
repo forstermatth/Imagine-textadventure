@@ -3,6 +3,15 @@ body {
 	font-family: monospace;
 }
 
+/*Canvas ------------------------------- */
+#map {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+    z-index: 1;
+}
+
+
 /* Classes ------------------------------- */
 .edgeLoad-EDGE-36491964 { visibility:hidden; } /*required by edge animate*/
 
@@ -21,6 +30,17 @@ body {
 	width: 475px;
 	height: 50px;
 	text-align: center;
+    z-index: 1;
+}
+
+#backpack {
+    position: absolute;
+    height: 500px;
+    width: 300px;
+    z-index: 1;
+    right: 40px;
+    top: 100px;
+    color: grey;
 }
 
 #game {
@@ -34,7 +54,6 @@ body {
 
 #alerttext {
     font-size: 10;
-    
     max-height: 100px;
     overflow: hidden;
 }
@@ -49,4 +68,70 @@ body {
 
 #neutral {
     color: lightgrey;
+}
+
+@media only screen and (max-width: 1268px) {
+    #backpack {
+        width: 200px;
+        top: 250px;
+    }
+
+    #map {
+        top: 100px;
+        width: 200px;
+    }
+
+}
+
+@media only screen and (max-width: 946px) {
+    #backpack {
+        visibility: hidden;
+    }
+
+    #map {
+        visibility: hidden;
+    }
+
+    #game {
+        height: 300px;
+        width: 400px;
+    }
+
+    #title{
+        font-size: 4em;
+    }
+}
+
+@media only screen and (max-width: 718px) {
+    .container{
+        width: 400px;
+    }
+
+    .EDGE-36491964 {
+        visibility: hidden;
+    }
+
+    #backpack {
+        visibility: hidden;
+    }
+
+    #map {
+        visibility: hidden;
+    }
+
+    #game {
+        height: 300px;
+        width: 400px;
+        margin-left: -70px;
+    }
+
+    #title{
+        font-size: 4em;
+    }
+
+    #typebox {
+        width: 375px;
+        height: 40px;
+        margin-left: -70px;
+    }
 }

@@ -9,7 +9,6 @@
     <!-- Vendor HTML5 -->
     <link href="css/vendor/boilerplate.css"     rel="stylesheet" type="text/css">
     <link href="css/vendor/bootstrap.min.css"   rel="stylesheet" type="text/css">
-      
     <!-- Imagine -->
     <link href="css/styles.css"                 rel="stylesheet" type="text/css">
 
@@ -18,46 +17,53 @@
   <body>
     <div class="container">
             
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="center">
-                        <h1 class="text-center" id="title">Imagine</h1>
-                        <div id="game">
-                            <div id="Stage" class="EDGE-36491964"></div>
-                        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="center">
+                    <h1 class="text-center" id="title">Imagine</h1>
+                    <div id="game">
+                        <div id="Stage" class="EDGE-36491964"></div>
                     </div>
+                </div>
+                
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <div class="center">
+                    <form id="userinput">
+                        <input class="text-center" id="typebox" placeholder="Type 'begin', hit enter." type="text"></input>
+                    </form>
+                </div>
+            </div>
+        </div>
+      
+        <div class="row">
+            <div class="center text-center">
+                <div class="col-md-12" id="alerttext">
                     
                 </div>
             </div>
-            
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="center">
-                        <form id="userinput">
-                            <input class="text-center" id="typebox" placeholder="Type 'begin', hit enter." type="text"></input>
-                        </form>
-                    </div>
-                </div>
-            </div>
-          
-            <div class="row">
-                <div class="center text-center">
-                    <div class="col-md-12" id="alerttext">
-                        
-                    </div>
-                </div>
-            </div>
-        
-      </div>
+        </div>
+    
+    <canvas id="map" width="300" height="600"></canvas>
+    <div id="backpack"></div>
+
+    </div>
+
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
     <!-- Bootstrap -->
     <script src="js/vendor/bootstrap.min.js" type="text/javascript" charset="utf-8"></script>
-      
+    <!-- Map -->
+    <script src="js/vendor/arbor.js"         type="text/javascript" charset="utf-8"></script>
     <!-- Imagine  -->
     <script src="js/eyeani_edgePreload.js"   type="text/javascript" charset="utf-8"></script>
+    <script src="js/map.js"                  type="text/javascript" charset="utf-8"></script>
     <script src="js/imagine-engine.js"       type="text/javascript" charset="utf-8"></script> 
     <script src="js/imagine.js"              type="text/javascript" charset="utf-8"></script>
+
      
       
   </body>
