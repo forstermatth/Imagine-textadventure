@@ -192,6 +192,16 @@ var castleThrone = new Location("castleThrone",
                                 "You walk into the room, experiencing a feeling of recognition. Have you been here before? <br/> A heavy layer of dust has settled over the throne. It hasn't been used in ages.",
                                 "Walking back into the throne room, you feel haunted. Empty.");
 
+var castleStair = new Location("castleStair",
+                                  "A Stairway",
+                                  "The dark stairway leads you into the depths of the mountain. You see skratches on the wall.",
+                                  "You feel a slight movement of air coming from the bottom of the stairs. <br/> You recognize the skratches on the wall.");
+
+var castleDungeon = new Location("castleDungeon",
+                                 "The dungeon",
+                                 "The dungeon has a lone torch sputtering on the far side of the room. Many cells lie derelict. You see a note on the floor. <br/> It reads: </br> 'Day 1: I've been thrown into the dungeon. I tried to influence the mage's second novel. I even went as far as to create storyboards. It seems as though the consumer will never influence the creator. Being a fan will never be appreciated.'",
+                                 "You notice a skeleton in one of the cells upon your second visit to the dungeon. The note is still where you left it. <br/> It reads: <br/> 'Day 1: I've been thrown into the dungeon. I tried to influence the mage's second novel. I even went as far as to create storyboards. It seems as though the consumer will never influence the creator. Being a fan will never be appreciated.'");
+
 // ITEMS --------------------------------------------
 var sword = new Item("sword",
                      "A shiny sword that scares trolls.");
@@ -290,10 +300,12 @@ $(document).ready(function () {
     castlePara.setPaths([0,0,0,0,castleMages,castleEastT]);
     castleMages.setPaths([0,0,0,0,0,castlePara]);
     castleWestT.setPaths([castleCorr2,0,castleCourt,0,0,0]);
-    castleCorr1.setPaths([castleThrone,castleEastT,0,0,0,0]);
+    castleCorr1.setPaths([castleThrone,castleEastT,0,0,0,castleStair]);
     castleCorr2.setPaths([castleThrone,castleWestT,castleArmory,0,0,0]);
     castleArmory.setPaths([castleThrone,0,castleWestT,0,0,0]);
     castleThrone.setPaths([0,castleArmory,castleCorr1,castleCorr2,0,0]);
+    castleStair.setPaths([0,0,0,0,castleCorr1,castleDungeon]);
+    castleDungeon.setPaths([0,0,0,0,castleStair,0]);
     
     forestTemple.setItem(sword);
     forestBridge.setNpc(troll);

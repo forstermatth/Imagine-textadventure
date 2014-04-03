@@ -155,10 +155,12 @@ function drawmap(){
         castlePara:{ castleMages:{}, castleEastT:{} },
         castleMages:{ castlePara:{} },
         castleWestT:{ castleCorr2:{}, castleCourt:{} },
-        castleCorr1:{ castleThrone:{}, castleEastT:{} },
+        castleCorr1:{ castleThrone:{}, castleEastT:{} , castleStair:{} },
         castleCorr2:{ castleThrone:{}, castleWestT:{}, castleArmory:{} },
         castleArmory:{ castleThrone:{}, castleWestT:{} },
-        castleThrone:{ castleArmory:{}, castleCorr1:{}, castleCorr2:{} }
+        castleThrone:{ castleArmory:{}, castleCorr1:{}, castleCorr2:{} },
+        castleStair:{ castleCorr1:{}, castleDungeon:{} },
+        castleDungeon:{ castleStair:{} }
 
       }
     })
