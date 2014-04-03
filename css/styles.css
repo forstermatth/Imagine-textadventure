@@ -8,6 +8,11 @@
 
 
 /* Global ------------------------------- */
+html body .container {
+    height: 100%;
+    padding-bottom: 15px;
+}
+
 body {
 	font-family: monospace;
 }
@@ -74,10 +79,11 @@ dd {
 }
 
 #foot {
-    margin-top: 150px;
-    margin-bottom: 10px;
+    height: 15px;
+    clear: both;
     color: lightgrey;
     text-align: center;
+    margin-top: -50px;
 }
 
 #foot a{
