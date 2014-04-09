@@ -58,7 +58,7 @@
 
           // draw a rectangle centered at pt
           var w = 7
-          
+
           ctx.fillStyle = (you.position.name == node.name) ? "green" : "black"
           ctx.fillRect(pt.x-w/2, pt.y-w/2, w,w)
         })    			
@@ -122,7 +122,7 @@
 // Draw the map - creates the edges and intializes the canvas.
 
 function drawmap(){
-    var sys = arbor.ParticleSystem(1000, 500, 0.5) // create the system with sensible repulsion/stiffness/friction
+    var sys = arbor.ParticleSystem(1200, 500, 0.5) // create the system with sensible repulsion/stiffness/friction
     sys.parameters({gravity:true}) // use center-gravity to make the graph settle nicely (ymmv)
     sys.renderer = Renderer("#map") // our newly created renderer will have its .init() method called shortly by sys...
 
