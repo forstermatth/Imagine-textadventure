@@ -227,37 +227,37 @@ var troll = new Npc("troll",
                     "hairy troll",
                     "NO SHALL PASS",
                     "I don't fight. go pass.",
-                    0, "sword");
+                    0, "sword", 0);
 
 var blacksmith = new Npc("blacksmith",
                          "grizzled blacksmith",
                          "I can't do any work without my favorite hammer..",
-                         "Ah, there it is. Thankyou. Now if only the king would come back..",
-                         4, "hammer");
+                         "Thanks for returning my hammer. Now if only the king would come back..",
+                         4, "hammer", 1);
 
 var mage = new Npc("mage",
                    "grizzled mage",
                    "Why hello there. I can't seem to find my book of spells. Have you seen it?",
-                   "Ah, there it is, now I can cast my sight spell... there. <br/>Oh! Sire! We have not seen you in years. Where have you been? <br/> Your wife and most the court left, nobody thought you were coming back. <br/> After you ran off when that huge eye appeared in the sky, we all thought you were gone for good. <br/> The commoners are still in the village, I suppose they have nowhere else to go.. <br/>",
-                  -1, "magic tome");
+                   "Now I can cast my sight spell... there. <br/>Oh! Sire! We have not seen you in years. Where have you been? <br/> Your wife and most the court left, nobody thought you were coming back. <br/> After you ran off when that huge eye appeared in the sky, we all thought you were gone for good. <br/> The commoners are still in the village, I suppose they have nowhere else to go.. <br/>",
+                  -1, "magic tome", 1);
 
 var wraith = new Npc("wraith",
                      "glowing wraith",
                      "What are yoouu dooing heere? I've lost myy amuulett....",
                      "The kingg wass a nicee perrsoon. Nobody know's why hee leftt...",
-                    -1, "lost amulet");
+                    -1, "lost amulet", 1);
 
 var innkeeper = new Npc("innkeeper",
                         "burley innkeep",
                         "Where is that damn mug?",
-                        "Thankye, have you heard what happened to the king?.",
-                       0, "ale mug");
+                        "Thankye muchly for returning my mug, have you heard what happened to the king?",
+                       0, "ale mug", 1);
 
 var guard = new Npc("guard",
                     "guard in heavy armour",
                     "Only men bearing the signit of the king shall pass!",
-                    "Oh, you found the crown. Go through.",
-                    0, "crown");
+                    "Oh, you found the crown. Go through",
+                    0, "crown", 0);
 
 
     

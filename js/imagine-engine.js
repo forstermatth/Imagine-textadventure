@@ -27,9 +27,17 @@ function alerttext(message, type) {
 
 function searchArray(name, property, array){
     for(var i = 0; i < array.length; i++){
-        if(array[i][property] === name) return i;   
+        if(array[i].name === name) return i;   
     }
     return -1;
+}
+
+function removeItem(name, array){
+    for(var i = 0; i < array.length; i++){
+        if(array[i].name == name){
+            array.splice(i, 1);
+        }
+    }
 }
 
 
@@ -150,11 +158,17 @@ Player.prototype.meetNpc = function () {
     var npc = this.position.npc;
     var npcspeech = "<p>"
     npcspeech += "A " + npc.desc + " stands infront of you. <br/> '";
-    if (searchArray(npc.movecond, "name", you.backpack) === -1) {
-        npcspeech += npc.speech;
-    } else {
+    if(npc.satisfied){
         npcspeech += npc.speech2;
-        this.position.npc.block = -1;
+    }else if (searchArray(npc.movecond, "name", you.backpack) != -1) {
+        npcspeech += npc.speech2;
+        npc.block = -1;
+        if(npc.takeitem == 1){
+            removeItem(npc.movecond, you.backpack);
+        }
+        npc.satisfied = 1;
+    } else {
+        npcspeech += npc.speech;
     }
     npcspeech += "', the " + npc.name + " says. <br/>";
     npcspeech += "</p>";
@@ -167,7 +181,7 @@ Player.prototype.checkItems = function () {
     var itemtext;
     itemtext = "<p>";
     if(this.position.item !== 0 && searchArray(this.position.item.name, "name", you.backpack) === -1){
-        itemtext += "You found a chest! You pick up a " + this.position.item.name + " and put it in your backpack.";
+        itemtext += "You found an item! You pick up a " + this.position.item.name + " and put it in your backpack.";
         this.addItem(this.position.item);
         alerttext("You put: " + this.position.item.name + " into your backpack!", "success");
     }else{
@@ -289,14 +303,17 @@ function Item(name, desc) {
         speech2 - the speech displayed if the player has the movecond
         block - the direction the npc blocks (1 for north ect.)
         movecond - the item name that allows the player to pass the npc
+        takeitem - whether or not the npc takes the movecond from the player
 ------------------------------------------------------------------ */
-function Npc(name, desc, speech, speech2, block, movecond) {
+function Npc(name, desc, speech, speech2, block, movecond, takeitem) {
     this.name = name;
     this.desc = desc;
     this.speech = speech;
     this.speech2 = speech2;
     this.block = block;
     this.movecond = movecond;
+    this.takeitem = takeitem;
+    this.satisfied = 0;
 }
 
 
