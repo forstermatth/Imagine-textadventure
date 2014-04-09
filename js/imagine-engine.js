@@ -59,6 +59,7 @@ Player.prototype.addItem = function(item){
 }
 
 // move - move the player (change position node) using strings representing directions
+//          sets the alert text in a certain direction
 // param direction the direction to move in string form
 Player.prototype.move = function (direction) {
     switch (direction) {
@@ -161,6 +162,7 @@ Player.prototype.meetNpc = function () {
 }
 
 //checkItems - check for items at the current position, put it in your backpack if there is one.
+//              returns text to display in the game, and sets the alert text
 Player.prototype.checkItems = function () {
     var itemtext;
     itemtext = "<p>";
