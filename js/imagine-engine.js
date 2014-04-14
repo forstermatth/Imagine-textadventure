@@ -184,6 +184,7 @@ Player.prototype.checkItems = function () {
         itemtext += "You found an item! You pick up a " + this.position.item.name + " and put it in your backpack.";
         this.addItem(this.position.item);
         alerttext("You put: " + this.position.item.name + " into your backpack!", "success");
+        this.position.item = 0;
     }else{
         return "";
     }
