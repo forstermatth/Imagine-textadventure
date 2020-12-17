@@ -59,11 +59,11 @@
           // draw a rectangle centered at pt
           var w = 7
 
-          const here = (you.position.name == node.name);
-          node.data.visited = true;
+          const here = (you.position.name === node.name);
+          if (here) node.data.visited = true;
 
           let color = here ? "pink" : "grey";
-          if (node.data.visited) color = "black";
+          if (!here && node.data.visited) color = "black";
 
           ctx.fillStyle = color;
           ctx.fillRect(pt.x-w/2, pt.y-w/2, w,w)
