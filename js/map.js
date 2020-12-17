@@ -44,7 +44,7 @@
           // pt2:  {x:#, y:#}  target position in screen coords
 
           // draw a line from pt1 to pt2
-          ctx.strokeStyle = "rgba(0,0,0, .333)"
+          ctx.strokeStyle = "rgba(192,192,192)"
           ctx.lineWidth = 1
           ctx.beginPath()
           ctx.moveTo(pt1.x, pt1.y)
@@ -62,8 +62,8 @@
           const here = (you.position.name === node.name);
           if (here) node.data.visited = true;
 
-          let color = here ? "pink" : "grey";
-          if (!here && node.data.visited) color = "black";
+          let color = here ? "rgba(0,225,128)" : "rgba(160,160,160)";
+          if (!here && node.data.visited) color = "rgba(32,32,32)";
 
           ctx.fillStyle = color;
           ctx.fillRect(pt.x-w/2, pt.y-w/2, w,w)
