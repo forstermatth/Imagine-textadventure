@@ -5,8 +5,8 @@
 
     Author: Matt Forster (@forstermatth)
     Date:   April 2014
-    
-    Classes: 
+
+    Classes:
             Player
             Location
             Item
@@ -27,7 +27,7 @@ function alerttext(message, type) {
 
 function searchArray(name, property, array){
     for(var i = 0; i < array.length; i++){
-        if(array[i].name === name) return i;   
+        if(array[i].name === name) return i;
     }
     return -1;
 }
@@ -44,7 +44,7 @@ function removeItem(name, array){
 /* ------------------------------------------------------------------
 
  CLASS : Player
- 
+
  Represents the player, their position, and the items they have collected.
  ------------------------------------------------------------------ */
 function Player() {
@@ -219,7 +219,7 @@ Player.prototype.printBackpack = function () {
         desc - the description that is displayed when the player is on the node
         vdesc - the description that is displayed with the player is on the node and has already been there
         item - a single item stored at this location
-        paths - the nodes connected to this node. directions in order are: 
+        paths - the nodes connected to this node. directions in order are:
                 [0] north [1] south [2] east [3] west [4] up [5] down
                 order of the nodes matters.
         visited - boolean to check if the node has been visited or not.
@@ -263,7 +263,7 @@ Location.prototype.printPaths = function () {
     var i;
     var compass = ["north", "south", "east", "west", "up", "down"];
     var info = "<p>";
-    
+
     info += "<ul>";
     for (i = 0; i < 6; i++) {
         if (this.paths[i] != 0) {
@@ -318,15 +318,16 @@ function Npc(name, desc, speech, speech2, block, movecond, takeitem) {
 }
 
 
-/* 
+/*
     Game logic - run every time the user submits something through the input box
 */
 $("#userinput").submit(function (event) {
+    event.preventDefault();
 
     var input = $("#typebox").val();
     input = input.toLowerCase();
     var presentation;
-    
+
     // Actions based on the input
     switch (input) {
     case "begin":
@@ -381,5 +382,4 @@ $("#userinput").submit(function (event) {
     $("#typebox").attr("placeholder", "");
     $("#backpack").html(you.printBackpack());
 
-    event.preventDefault();
 });

@@ -18,15 +18,15 @@
         // inform the system of the screen dimensions so it can map coords for us.
         // if the canvas is ever resized, screenSize should be called again with
         // the new dimensions
-        particleSystem.screenSize(canvas.width, canvas.height) 
+        particleSystem.screenSize(canvas.width, canvas.height)
         particleSystem.screenPadding(80) // leave an extra 80px of whitespace per side
-        
+
         // set up some event handlers to allow for node-dragging
         that.initMouseHandling()
       },
-      
+
       redraw:function(){
-        particleSystem.screenSize(canvas.width, canvas.height) 
+        particleSystem.screenSize(canvas.width, canvas.height)
         // redraw will be called repeatedly during the run whenever the node positions
         // change. the new positions for the nodes can be accessed by looking at the
         // .p attribute of a given node. however the p.x & p.y values are in the coordinates
@@ -34,10 +34,10 @@
         // the screen yourself, or use the convenience iterators .eachNode (and .eachEdge)
         // which allow you to step through the actual node objects but also pass an
         // x,y point in the screen's coordinate system
-        // 
+        //
         ctx.fillStyle = "white"
         ctx.fillRect(0,0, canvas.width, canvas.height)
-        
+
         particleSystem.eachEdge(function(edge, pt1, pt2){
           // edge: {source:Node, target:Node, length:#, data:{}}
           // pt1:  {x:#, y:#}  source position in screen coords
@@ -59,11 +59,17 @@
           // draw a rectangle centered at pt
           var w = 7
 
-          ctx.fillStyle = (you.position.name == node.name) ? "green" : "black"
+          const here = (you.position.name == node.name);
+          node.data.visited = true;
+
+          let color = here ? "pink" : "grey";
+          if (node.data.visited) color = "black";
+
+          ctx.fillStyle = color;
           ctx.fillRect(pt.x-w/2, pt.y-w/2, w,w)
-        })    			
+        })
       },
-      
+
       initMouseHandling:function(){
         // no-nonsense drag and drop (thanks springy.js)
         var dragged = null;
@@ -109,15 +115,15 @@
             return false
           }
         }
-        
+
         // start listening
         $(canvas).mousedown(handler.clicked);
 
       },
-      
+
     }
     return that
-  }    
+  }
 
 // Draw the map - creates the edges and intializes the canvas.
 

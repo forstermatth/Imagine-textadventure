@@ -3,7 +3,7 @@
   IMAGINE GAME DEFINITIONS
 
   This file holds all of the locations, npcs, and items in the game.
-  Making/changing the game is all done here. Extension and changes are as easy as adding / modifing 
+  Making/changing the game is all done here. Extension and changes are as easy as adding / modifing
   these definitions
 
   Author: Matt Forster (@forstermatth)
@@ -18,8 +18,8 @@ var you; //player
 
 // LOCATIONS --------------------------------------------
 var begin = new Location("begin",
-                 "A forest clearing.", 
-                 "You wake up on the grass in a clearing, somewhere in some forest.", 
+                 "A forest clearing.",
+                 "You wake up on the grass in a clearing, somewhere in some forest.",
                  "The forest clearing, where you woke up earlier. <br/> You see your footprints on the ground.");
 
 var forestPath = new Location( "forestPath",
@@ -38,73 +38,73 @@ var forestClearing = new Location("forestClearing",
                                   "The clearing is the same, a cat is frolicing in the field. <br/> You see your footprints in the grass.");
 
 var forestTemple = new Location("forestTemple",
-                                  "A Forest Temple.", 
-                          "A white temple looms up infront of you. Wondering what it is for, you go inside.", 
+                                  "A Forest Temple.",
+                          "A white temple looms up infront of you. Wondering what it is for, you go inside.",
                           "It looks like someone has shut the temple doors. <br/> You see your footprints on the ground.");
 
 var forestPath2 = new Location("forestPath2",
-                                  "A lakeside path.", 
-                         "The path heads towards a lake, skirting the shoreline.", 
+                                  "A lakeside path.",
+                         "The path heads towards a lake, skirting the shoreline.",
                          "The path heads towards a lake, skirting the shoreline. <br/> You see your footprints on the ground.");
 
 var forestLake = new Location("forestLake",
-                                  "A large lake.", 
-                              "The lake glistens in the sunlight, the opposite shore barely visible.", 
+                                  "A large lake.",
+                              "The lake glistens in the sunlight, the opposite shore barely visible.",
                               "The lake glistens in the sunlight, as fish jump in the distance. <br/> You see your footprints on the ground");
 
 var forestBridge = new Location("forestBridge",
                                   "A stone bridge.",
-                                "A large stone bridge crosses a stream.", 
+                                "A large stone bridge crosses a stream.",
                                 "The bridge looks the same. You notice some bones scattered around the sides. <br/> You see your footprints on the ground");
 
 var forestTrollden = new Location("forestTrollden",
                                   "A trolls cave underneath the bridge.",
-                                  "The smell of rotten meat chokes the air. You see many bones on the ground of the cave.", 
+                                  "The smell of rotten meat chokes the air. You see many bones on the ground of the cave.",
                                   "Still smelly, still full of bones. <br/> You see your footprints where there are no bones.");
 
 var forestPath3 = new Location("forestPath3",
-                                  "A forest path.", 
+                                  "A forest path.",
                                "The path heads straight, as the trees start to thin.",
                                "The path heads straight, as the trees start to thin. <br/> You see your footprints on the ground.");
 
 var forestEnd = new Location("forestEnd",
                                   "The edge of the forest.",
-                             "The edge of the forest is bright and sunny, you see a village in the valley in the distance.", 
+                             "The edge of the forest is bright and sunny, you see a village in the valley in the distance.",
                              "The edge of the forest is bright and sunny, the village bustling in the valley below. <br/> You see your footprints on the ground.");
 
 var townSGate = new Location("townSGate",
-                                  "The town's south gate.", 
-                             "The towns gate is open wide, and two gaurds stand on either side.", 
+                                  "The town's south gate.",
+                             "The towns gate is open wide, and two gaurds stand on either side.",
                              "The towns gate is open wide, the two gaurds nod at you as you pass.");
 
 var townCenter = new Location("townCenter",
-                                  "The town's center.", 
-                              "The towns center is busy, with villagers walking through on errands.", 
+                                  "The town's center.",
+                              "The towns center is busy, with villagers walking through on errands.",
                               "The towns center is still busy, nobody giving you a second look as your walk past them.");
 
 var townMarket = new Location("townMarket",
-                                  "The town's market.", 
-                              "The towns market is loud, merchants yelling over eachother trying to sell.", 
+                                  "The town's market.",
+                              "The towns market is loud, merchants yelling over eachother trying to sell.",
                               "The towns market is loud, as merchants who recognize you try to get you to buy their wares.");
 
 var townBlkSmith = new Location("townBlkSmith",
-                                  "A blacksmiths shop.", 
-                                "The shop is bellowing smoke and the forge inside is busy working.", 
+                                  "A blacksmiths shop.",
+                                "The shop is bellowing smoke and the forge inside is busy working.",
                                 "The shop is loud as you hear metal being worked inside.");
 
 var townBlkSAttic = new Location("townBlkSAttic",
-                                  "The blacksmiths attic.", 
-                                 "The attic of the shop is full of tools and smells of smoke from below.", 
+                                  "The blacksmiths attic.",
+                                 "The attic of the shop is full of tools and smells of smoke from below.",
                                  "The attic seems the same as the last time you were up here.");
 
 var townInn = new Location("townInn",
-                                  "The town's inn.", 
+                                  "The town's inn.",
                            "The town's inn is busy as people walk in and out of the bar on the main floor.",
                            "The town's drunkard recognizes you as he stumbles around the inn's bar.");
 
 var townGarden = new Location("townGarden",
-                                  "The town's garden.", 
-                              "The town's garden is full of life, and you catch a glimpse of an elf jumping over the town walls.", 
+                                  "The town's garden.",
+                              "The town's garden is full of life, and you catch a glimpse of an elf jumping over the town walls.",
                               "The garden is green as ever, no sign of the elf though.");
 
 var townNGate = new Location("townNGate",
@@ -113,82 +113,82 @@ var townNGate = new Location("townNGate",
                              "The town's gate is open. <br/> You see your footprints on the road.");
 
 var mountPath = new Location("mountPath",
-                                  "A path towards the mountains.", 
-                             "The mountain path roams through the foothills towards the mountains.", 
+                                  "A path towards the mountains.",
+                             "The mountain path roams through the foothills towards the mountains.",
                              "The mountain path roams through the foothills. <br/> You spot your footprints on multiple areas of the long trail.");
 
 var mountPass1 = new Location("mountPass1",
-                                  "The beginnings of the mountain pass.", 
-                              "The pass starts climbing steeply, getting snowy near the top.", 
+                                  "The beginnings of the mountain pass.",
+                              "The pass starts climbing steeply, getting snowy near the top.",
                               "The pass starts climbing steeply, the snowy path showing your footprints along the way.");
 
 var mountPass2 = new Location("mountPass2",
-                                  "The snowy pass.", 
-                              "The pass cuts through two huge mountains, covered in miles of snow.", 
+                                  "The snowy pass.",
+                              "The pass cuts through two huge mountains, covered in miles of snow.",
                               "The snowy mountain valley is quite except your footfall. <br/> You see you footsteps in the snow.");
 
 var mountCave = new Location("mountCave",
-                                  "A cave in the mountain.", 
-                             "The cave smells damp, with the cold wind flowing through the entrance.", 
+                                  "A cave in the mountain.",
+                             "The cave smells damp, with the cold wind flowing through the entrance.",
                              "The cave smells damp, and some warm air is flowing up through the depths. <br/> You see your footprints at the entrance.");
 
 var mountStairs = new Location("mountStairs",
-                                  "Carved Stairs.", 
-                               "The stairs carved into the rock are icy, off to the side there is a cliff.", 
+                                  "Carved Stairs.",
+                               "The stairs carved into the rock are icy, off to the side there is a cliff.",
                                "The stairs have proven their danger, you walk carefully.");
 
 var mountPool = new Location("mountPool",
-                                  "Inspect the cliff edge.", 
-                             "As you inspect the cliff edge, you slip and fall. <br/> You've fallen into a pool at the bottom of the cliff. Luckily you are unhurt.", 
+                                  "Inspect the cliff edge.",
+                             "As you inspect the cliff edge, you slip and fall. <br/> You've fallen into a pool at the bottom of the cliff. Luckily you are unhurt.",
                              "Again? really?");
 
 var castleGate = new Location("castleGate",
-                                  "A Gate.", 
+                                  "A Gate.",
                               "The castle gate lies ajar. You push it open to reveal an inner courtyard.",
                               "The door being pushing open, it is easy to walk in and out of the castle.");
 
 var castleCourt = new Location("castleCourt",
-                                  "The castle courtyard.", 
+                                  "The castle courtyard.",
                                "The heavy snow obscures the real extent of the castle, but you see entry into the two towers.",
                                "You can discerne some features of the courtyard, including war machines.<br/> You see your footprints in the snow.");
 
 var castleEastT = new Location("castleEastT",
-                                  "The castle's east tower.", 
+                                  "The castle's east tower.",
                                "The tower is warm inside, with torches lining the walls.",
                                "The tower is warm inside, rich carpets lining the floors.");
 
 var castlePara = new Location("castlePara",
-                                  "The castles parapets.", 
+                                  "The castles parapets.",
                               "It is cold on the wall, but you see someone elses footprints in the snow.",
                               "Your footprints are there as well as the others.");
 
 var castleMages = new Location("castleMages",
-                                  "The castles mages quarters.", 
-                               "The mages quarters is full of books. Weird machines are scattered here and there.", 
+                                  "The castles mages quarters.",
+                               "The mages quarters is full of books. Weird machines are scattered here and there.",
                                "You wonder why this mage is here all alone.");
 
 var castleWestT = new Location("castleWestT",
-                                  "The castles west tower.", 
+                                  "The castles west tower.",
                                "The tower is warm inside, suits of armor line the walls.",
                                "The tower is warm inside. The suits seem to be watching you.");
 
 var castleCorr1 = new Location("castleCorr1",
-                                  "A Corridor.", 
-                               "Paintings of past kinds line the walls of this long hallway.", 
+                                  "A Corridor.",
+                               "Paintings of past kinds line the walls of this long hallway.",
                                "The paintings seem kind and cruel at the same time, as they watch you walk past.");
 
 var castleCorr2 = new Location("castleCorr2",
-                                  "A Corridor.", 
-                               "The corridor is line with ornate melee weapons of all sizes.", 
+                                  "A Corridor.",
+                               "The corridor is line with ornate melee weapons of all sizes.",
                                "The weapons on the wall look deadly and beautiful at the same time.");
 
 var castleArmory = new Location("castleArmory",
-                                  "The Armory.", 
-                                "Utilitarian weapons and armor line the walls in racks. You wonder where all the people are.", 
+                                  "The Armory.",
+                                "Utilitarian weapons and armor line the walls in racks. You wonder where all the people are.",
                                 "The weapons in this room look used and deadly, the creations and masters of war.");
 
 var castleThrone = new Location("castleThrone",
-                                  "The Throneroom.", 
+                                  "The Throneroom.",
                                 "You walk into the room, experiencing a feeling of recognition. Have you been here before? <br/> A heavy layer of dust has settled over the throne. It hasn't been used in ages.",
                                 "Walking back into the throne room, you feel haunted. Empty.");
 
@@ -260,7 +260,7 @@ var guard = new Npc("guard",
                     0, "crown", 0);
 
 
-    
+
 
 // Worldbuilder
 // This function builds the map when the page has loaded.
@@ -268,7 +268,7 @@ $(document).ready(function () {
     started = false;
     eye = $("#game").html();
     $("#typebox").focus();
-   
+
     begin.setPaths([forestPath,0,0,0,0,0]);
     forestPath.setPaths([forestCrossroads,begin,0,0,0,0]);
     forestCrossroads.setPaths([forestBridge,forestPath,forestClearing,forestPath2,0,0]);
@@ -306,7 +306,7 @@ $(document).ready(function () {
     castleThrone.setPaths([0,castleArmory,castleCorr1,castleCorr2,0,0]);
     castleStair.setPaths([0,0,0,0,castleCorr1,castleDungeon]);
     castleDungeon.setPaths([0,0,0,0,castleStair,0]);
-    
+
     forestTemple.setItem(sword);
     forestBridge.setNpc(troll);
     forestTrollden.setItem(hammer);
@@ -319,11 +319,10 @@ $(document).ready(function () {
     mountPool.setItem(lostAmulet);
     forestLake.setItem(crown);
     castleGate.setNpc(guard);
-        
+
 });
 
 //Open the hints dialog box when the link is clicked.
 $('#hints').click(function () {
-        window.open('hints.html', '', 'left=500,top=500,width=400px,height=400px,location=no,menubar=no,resizeable=no,scrollbars=no,titlebar=no,status=no,toolbar=no');
-    });
-
+  window.open('hints.html', '', 'left=500,top=500,width=400px,height=400px,location=no,menubar=no,resizeable=no,scrollbars=no,titlebar=no,status=no,toolbar=no');
+});
